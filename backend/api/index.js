@@ -1,3 +1,10 @@
-import app from "../server.js";
+import express from "express";
+
+const app = express();
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("Backend is working 🚀");
+});
 
 export default app;
