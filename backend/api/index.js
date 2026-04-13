@@ -1,10 +1,3 @@
-import express from "express";
-
-const app = express();
-app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.send("Backend is working 🚀");
-});
-
-export default app;
+export default function handler(req, res) {
+  res.status(200).json({ message: "Backend working ✅" });
+}
